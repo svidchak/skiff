@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Oswald&subset=cyrillic');
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0
+}
+body {
+    max-width: 980px;
+    margin: auto;
+}
+@media (min-width: 550px) {
+    header {
+        display: flex;
+    }
+} 
+.menu{
+    font-family: 'Exo 2', sans-serif;
+}
+
+ul{
+    display: flex;
+}
+ul{
+    padding: 0;
+    justify-content: space-around;
+    flex: 1;
+}
+.menu li{
+    list-style-type: none;
+}
+.menu a{
+    margin-top: 30px;
+    text-decoration: none;
+}
+   
+ul li a {
+  position: relative;
+  display: block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: #aaa;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+}
+ul li a::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: #708090;
+  transition: 0.5s;
+}
+ul li a:hover {
+  color: #fff;
+}
+ul li a:hover::before {
+  animation: animate .5s linear forwards; 
+}
+
+@keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
+header h1{
+    font-size: 75pt;
+}
+.menu a{
+    font-size: 22pt;
+}
+
+
